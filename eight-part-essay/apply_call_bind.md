@@ -77,6 +77,8 @@ Function.prototype.myApply = function (context) {
 ### 手写bind
 
 ```javascript
+// 利用call实现，返回一个新函数，新函数里面去执行调用bind的函数，执行时用call绑定上下文和参数
+// 最后把原函数的原型对象给到新函数
 Function.prototype.myBind = function (objThis, ...params) {
     const thisFn = this;	// 存储原函数
     let newFn = function (...otherParams) {
