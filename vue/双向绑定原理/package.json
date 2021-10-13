@@ -1,0 +1,19 @@
+{
+  "name": "data_reactive",
+  "version": "1.0.0",
+  "description": "> `双向数据绑定的方式`\r >\r > * 发布订阅模式\r > * Angular的脏查机制\r > * 数据劫持\r >\r > `Vue的方式`\r >\r > * 采用数据劫持与发布订阅相结合的方式（数据劫持主要通过`Object.defineProperty`来实现）\r >\r > `步骤`：\r >\r > 1. 监听器：`劫持`并`监听`所有属性，如果属性发生变化，`通知订阅者`\r > 2. 订阅器：用来`收集订阅者`，对监听器和订阅者进行`统一管理`\r > 3. 订阅者：收到属性变化的通知并`执行相应的方法`，从而`更新视图`\r > 4. 解析器：`解析`每个节点的相关`指令`，对模板数据和订阅器进行`初始化`（绑定订阅者）",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0"
+  }
+}
