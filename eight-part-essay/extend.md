@@ -257,7 +257,7 @@ function _inherits(subClass, superClass) {
 > 1. 函数声明和类声明的区别：函数声明有变量提升，类没有，需要先声明后使用
 > 2. 父子顺序
 >    * ES5继承实质上是先创建子类的实例对象，然后再将父类的方法添加到this上；
->    * ES6继承实质上是先创建父类的实例对象this，然后再用子类的构造函数修改this，所以子类的constructor需要在使用this前就调用super方法创建父类的this对象，否则会报错（可以理解为子类没有this）
+>    * ES6继承实质上是先创建父类的实例对象`this`，然后再用子类的构造函数修改`this`，所以子类的`constructor`需要在使用`this`前就调用`super`方法创建父类的`this`对象，否则会报错（可以理解为子类没有`this`）
 
 
 
