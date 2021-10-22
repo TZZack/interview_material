@@ -4,7 +4,7 @@
 
 * 语法糖，让对象原型的写法更加清晰、更像面向对象的编程
 * 与构造函数生成实例的用法一致
-* 内部定义方法不需要function关键字，方法间不需要分好，必须使用new调用
+* 内部定义方法不需要function关键字，方法间不需要分号
 * 类的所有方法都定义到该类的prototype原型对象上
 * this指向类的实例对象，在this上显式定义的属性（constructor）即定义在实例对象上
 * 类和模块的内部，默认就是严格模式（所以如果直接调用类的方法，会报错，this丢失）
@@ -22,8 +22,6 @@ class Person {
 const { getName } = Person
 getName();	// 报错，this为undefined
 ```
-
-
 
 ## 与ES5的区别
 

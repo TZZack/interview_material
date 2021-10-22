@@ -209,8 +209,8 @@ Module._loadFn['.js'] = function (module) {
     let script = Module.wrapper[0] + content + Module.wrapper[1];
     // 3.创建沙箱环境，运行并范围结果
     let fn = vm.runInThisContext(script);	// 在当前全局作用域下执行，与eval的区别是eval的作用域会在当前模块
-    // 4.执行闭包函数，将被闭包函数包裹的加载内容
-	// TODO，没看懂
+    // 4.执行闭包函数，模块内部给module.exports赋值绑定
+    fn.call(module, module.exports, requireZZZ, module)
 }
 
 // 声明一个全局的加载模块的函数
